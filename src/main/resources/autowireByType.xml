@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="specification" class="com.example.autowire.type.Specification">
+        <property name="make" value="Mazda"/>
+        <property name="model" value="CX-8"/>
+    </bean>
+
+    <!-- look for bean by field type which in the Car class, is "com.example.autowire.type.Specification", and the above bean's class is exactly that, also initialization will be done by setter not constructor, so constructor in Car class not needed -->
+    <!-- Note than only one bean with this type should exist, if we have more than one there will be error -->
+    <bean id="myCar" class="com.example.autowire.type.Car" autowire="byType">
+
+    </bean>
+
+</beans>
