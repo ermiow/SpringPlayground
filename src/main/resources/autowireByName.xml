@@ -5,13 +5,14 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="carSpecification" class="car.example.constructor.injection.Specification">
+    <bean id="specification" class="com.example.autowire.name.Specification">
         <property name="make" value="Mazda"/>
         <property name="model" value="CX-8"/>
     </bean>
 
-    <bean id="myCar" class="car.example.constructor.injection.Car">
-        <constructor-arg ref="carSpecification"/>
+    <!-- look for bean by field name which in the Car class, is "specification", so we need to change the above bean's id as "specification", also initialization will be done by setter not constructor, so constructor in Car class not needed -->
+    <bean id="myCar" class="com.example.autowire.name.Car" autowire="byName">
+
     </bean>
 
 </beans>

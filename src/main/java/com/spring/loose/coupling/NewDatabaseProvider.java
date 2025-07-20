@@ -1,6 +1,6 @@
-package com.loose.coupling;
+package com.spring.loose.coupling;
 
-public class NewDatabaseProvider implements UserDataProvider{
+public class NewDatabaseProvider implements UserDataProvider {
 
     @Override
     public String getUserDetails() {

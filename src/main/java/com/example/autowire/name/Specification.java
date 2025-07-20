@@ -1,4 +1,4 @@
-package car.example.constructor.injection;
+package com.example.autowire.name;
 
 public class Specification {
     private String make;
@@ -9,6 +9,7 @@ public class Specification {
     }
 
     public void setMake(String make) {
+        System.out.println("setter called make");
         this.make = make;
     }
 

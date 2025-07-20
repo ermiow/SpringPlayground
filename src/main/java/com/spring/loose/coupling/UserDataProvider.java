@@ -1,4 +1,4 @@
-package com.loose.coupling;
+package com.spring.loose.coupling;
 
 public interface UserDataProvider {
     String getUserDetails();
